@@ -10,10 +10,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileManager {
 	
-	private static final String FILE_UPLOAD_PATH = "D:\\김인규 강사\\web\\20230412\\springProject\\upload\\memo";
+	public static final String FILE_UPLOAD_PATH = "D:\\김인규 강사\\web\\20230412\\springProject\\upload\\memo";
 	
 	// 파일 저장 -> 경로 리턴 
 	public static String saveFile(int userId, MultipartFile file) {
+		
+		
+		if(file == null) {
+			return null;
+		}
 		
 		// 같은 이름의 파일이 구분되어서 저장되도록 구성
 		// 폴더를 만들어서 파일을 저장

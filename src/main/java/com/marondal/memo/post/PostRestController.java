@@ -25,7 +25,7 @@ public class PostRestController {
 	public Map<String, String> createMemo(
 			@RequestParam("title") String title
 			, @RequestParam("content") String content
-			, @RequestParam("file") MultipartFile file
+			, @RequestParam(value="file", required=false) MultipartFile file
 			, HttpSession session) {
 		
 		// 로그인된 사용자의 user id
